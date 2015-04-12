@@ -1,0 +1,18 @@
+
+<!-- Header -->
+  <div id="header">
+    <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="/index.html" class="scrolly">Home</a></li>
+          <li><a href="/posts.html" class="scrolly">Blog</a></li>
+          
+        {% for page in site.pages %}
+          {% if page.title %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}" class="scrolly">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </nav>
+
+  </div>
