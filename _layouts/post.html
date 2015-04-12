@@ -7,9 +7,10 @@ layout: default
         <div class="container">
             <article id="main" class="special">
                 <header>
-                    <h2><a href="#">{{ page.title }}</a></h2>
+                    <!-- <h2><a href="#">{{ page.title }}</a></h2> -->
+                    <p class="timestamp">{{ page.date | date: "%-d %b %Y" }}</p>
                     <p>
-                        {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+                        {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
                     </p>
                 </header>
                 {{ content }}
