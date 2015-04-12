@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Blog
 ---
 
 <div class="wrapper style1">
@@ -9,9 +10,18 @@ layout: default
       <ul class="post-list">
         {% for post in site.posts %}
           <li>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
             <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              {{ post.title }}
             </h2>
+            <p><span class="timestamp">{{ post.date | date: "%b %Y" }} - </span>
+            {% if post.description %}
+              {{ post.description | strip_html }}
+            {% else %}
+              {{ post.excerpt | strip_html }}
+            {% endif %}
+            </p>
+          </a>
           </li>
         {% endfor %}
       </ul>
