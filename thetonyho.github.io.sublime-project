@@ -1,8 +1,17 @@
 {
-	"folders":
-	[
-		{
-			"path": "."
-		}
-	]
+    "folders":
+    [
+        {
+            "path": "."
+        }
+    ],
+
+    "settings":
+    {
+        "Jekyll":
+        {
+            "posts_path": "_posts",
+            "drafts_path": "_drafts"
+        }
+    }
 }
